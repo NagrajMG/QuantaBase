@@ -29,7 +29,7 @@ class MarkowitzModel:
     def calculate_return(self, data):
         # NORMALIZATION - to measure all variables in comparable metric
        self.log_return = np.log(data / data.shift(1))
-       print(self.log_return[1:]) 
+    #    print(self.log_return[1:]) 
        return self.log_return
 
 
