@@ -8,21 +8,21 @@ if __name__ == '__main__':
     end_date = '2025-01-01'
     stocks = ['AAPL', 'WMT', 'TSLA', 'GE', 'AMZN', 'DB']
 
-    # # # Capital Asset Pricing Model
-    # capm = CAPM(['AAPL', '^GSPC'], start_date, end_date)
-    # capm.initialize()
-    # capm.calculate_beta()
-    # capm.regression()
+    # # Capital Asset Pricing Model
+    capm = CAPM(['AAPL', '^GSPC'], start_date, end_date)
+    capm.initialize()
+    capm.calculate_beta()
+    capm.regression()
 
-    # # Markowitz Model
-    # NUM_PORTFOLIOS = 10000
-    # Markowitz = MarkowitzModel(start_date, end_date, stocks, NUM_PORTFOLIOS)
-    # Markowitz.runMarkowitz()
+    # Markowitz Model
+    NUM_PORTFOLIOS = 10000
+    Markowitz = MarkowitzModel(start_date, end_date, stocks, NUM_PORTFOLIOS)
+    Markowitz.runMarkowitz()
 
-    # # Regime switching Model
-    # switchModel = RegimeSwitch(start_date, end_date, stocks)
-    # weights_0, weights_1 = switchModel.runModel()
-    # switchModel.computeMetrics(weights_0, weights_1)
+    # Regime switching Model
+    switchModel = RegimeSwitch(start_date, end_date, stocks)
+    weights_0, weights_1 = switchModel.runModel()
+    switchModel.computeMetrics(weights_0, weights_1)
 
     # Black-Scholes Option Pricing
     S0=100					#underlying stock price at t=0
